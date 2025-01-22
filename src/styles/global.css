@@ -1,0 +1,152 @@
+:root {
+    --active-brightness: 0.85;
+
+    --color-text: rgb(246 244 239 / 80%);
+    --color-white: #fff;
+    --color-black: #27292D;
+
+    --font-family: "Inter", serif;
+    --font-family-header: "Newsreader", serif;
+
+    --header-color-text: rgb(246 244 239);
+
+    --hover-brightness: 1.2;
+
+    --line-height: 1.5;
+    
+    --link-color: #118bee;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    height: 100%;
+    min-height: 100%;
+    background-color: var(--color-black);
+    background-image: linear-gradient(to right top, #1e1f21, #202124, #232426, #252629, #28292c, #292a2e, #292c30, #2a2d32, #2a2d33, #292e34, #292e36, #292e37);
+    background-attachment: fixed;
+    color: var(--color-text);
+    font-family: var(--font-family);
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: var(--line-height);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--header-color-text);
+    margin: 0;
+    line-height: var(--line-height);
+    font-family: var(--font-family-header);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-wrap: balance;
+    display: inline-block;
+    width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1.0rem;
+}
+
+h6 {
+    font-size: 0.8rem;
+}
+
+
+p {
+    font-size: 1.25rem;
+    margin: 0.75rem 0;
+    padding: 0;
+    width: 100%;
+}
+
+pre {
+    margin: 1rem 0;
+    padding: 1rem 0;
+}
+
+pre code,
+pre samp {
+    display: block;
+    padding: 0.5rem 2rem;
+    white-space: pre-wrap;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--color-text) !important;
+    text-decoration: underline;
+    font-weight: 400;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+a:hover {
+    color: var(--color-text);
+    text-decoration-style: solid;
+}
+
+a:active {
+    color: var(--color-text);
+}
+
+/* Utils */
+.text-center {
+    text-align: center;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 45%;
+}
+
+/* Scrollbars */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-scrollbar) transparent;
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--color-scrollbar);
+    border-radius: 10px;
+}

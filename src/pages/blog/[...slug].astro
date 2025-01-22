@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+
+import Post from '../../components/Post.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection("blog");
+  return allPosts.map(post => ({
+    params: { slug: post.slug }, props: { post },
+  }));
+}
+
+const { slug } = Astro.params;
+const posts = await getCollection('blog');
+const post = posts.find((post) => post.slug === slug);
+
+if (!post) return Astro.redirect("/404");
+
+const { Content } = await post.render();
+
+---
+
+<BaseLayout description={post.data.description}>
+  <Post title={post.data.title} heroImage={post.data.heroImage} heroImageAlt={post.data.heroImageAlt} tags={post.data.tags}>
+    <Content />
+  </Post>
+</BaseLayout>

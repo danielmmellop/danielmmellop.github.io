@@ -1,0 +1,59 @@
+---
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection("blog")
+posts.sort((a, b) => {
+  return b.data.pubDate.getTime() - a.data.pubDate.getTime();
+});
+---
+
+<h1>Blog</h1>
+
+<ul> 
+    {
+        posts.map(post => ( 
+            <li>
+                <a href={`/blog/${post.slug}`}>
+                    <h2>{post.data.title}</h2>
+                    <p>{post.data.description}</p>
+                </a> 
+            </li>
+        ))
+    } 
+</ul>
+
+
+<style>
+    h1 {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    p {
+        margin-top: 0;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    ul li {
+        margin: 0 0.5rem;
+        position: relative;
+        text-align: left;
+        margin-bottom: 3rem;
+    }
+
+    ul li a{
+        text-decoration: none;
+    }
+
+    ul li a:hover h2 {
+        text-decoration: underline;
+        font-weight: 400;
+        text-decoration-style: dashed;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+    }
+</style>
+

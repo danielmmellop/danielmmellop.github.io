@@ -1,0 +1,12 @@
+---
+import { getCollection } from 'astro:content';
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostList from '../components/PostList.astro';
+
+---
+
+<BaseLayout description="Lista todos os Posts publicados.">
+	<PostList />
+</BaseLayout>
+
