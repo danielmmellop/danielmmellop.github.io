@@ -3,6 +3,7 @@ title: "Hello World !"
 description: "Meu primerio post !"
 heroImage: "/images/hello-world.jpg"
 heroImageAlt: "computador com uma mensagem 'hello world'"
+tags: ["oi"]
 pubDate: 2025-01-20
 ---
 

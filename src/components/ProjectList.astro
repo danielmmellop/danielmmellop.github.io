@@ -20,13 +20,15 @@ const projects = await getCollection("projects");
     } 
 </ul>
 
-
 <style>
     h1 {
         text-align: center;
-        margin-top: 2rem;
+        margin-bottom: 0;
     }
-
+    h2 {
+        margin-bottom: 0;
+    }
+    
     p {
         margin-top: 0;
     }
@@ -34,12 +36,6 @@ const projects = await getCollection("projects");
     ul {
         list-style: none;
         padding: 0;
-    }
-    ul li {
-        margin: 0 0.5rem;
-        position: relative;
-        text-align: left;
-        margin-bottom: 3rem;
     }
 
     ul li a{

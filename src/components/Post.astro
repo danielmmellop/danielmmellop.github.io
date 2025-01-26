@@ -7,8 +7,8 @@ const { heroImage, heroImageAlt, title, tags } = Astro.props;
 <article>
     <div>
         { title && <h1>{title}</h1>}
-        { tags && <TagList names={tags} />}
-        { heroImage && <img src={heroImage} alt={heroImageAlt} />}
+        { tags && <TagList className="text-center" names={tags} />}
+        { heroImage && <div class="image-wrapper full-center"><img src={heroImage} alt={heroImageAlt} /></div>}
     </div>
 
     <slot />
@@ -17,20 +17,11 @@ const { heroImage, heroImageAlt, title, tags } = Astro.props;
 </article>
 
 <style>
-    hr {
-        margin-top: 3rem;
-        border: 0;
-        padding: 1px;
-        box-shadow: inset -1px -1px 9px -7px rgb(157 157 157 / 40%);
-    }
-
-    article div {
-        text-align: center;
+    .image-wrapper {
+        margin: 2rem 0rem;
     }
     
     h1 {
         text-align: center;
-        margin-top: 2rem;
     }
-
 </style>

@@ -3,7 +3,7 @@ title: "Instalação do Golang no Ubuntu"
 description: "Passo a passo de como instalar o Golang no Ubuntu"
 heroImage: "/images/computer-screen.jpg"
 heroImageAlt: "tela de computador com alguns comandos aleatórios"
-tags: ["ubuntu"]
+tags: ["linux", "ubuntu"]
 pubDate: 2025-01-21
 ---
 
